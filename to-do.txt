@@ -1,0 +1,22 @@
+introduccion
+tipos de datos
+variables
+condicionales
+arrays
+
+
+-Pensar como continuar la leccion de introduccion
+-Hacer un sketch de como realizar preguntas
+	-Tener un prototipo del quiz más o menos funcional
+
+
+
+INTRODUCCION
+-Poner un quiz preguntando que opcion es un algoritmo
+
+
+verde de la app
+20C3AF
+
+pxs de progreso
+32 px

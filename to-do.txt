@@ -21,5 +21,43 @@ verde de la app
 pxs de progreso
 32 px
 
+-Que son
+-Como funcionan
+-Variables en Python
+-Normas de los nombres
 
-00 01 02 03 03 13 23 33 33 32 31 30 30 20 10 00
+
+
+
+Las variables son contenedores donde guardar valores y poder repetir
+estos en multiples partes del código y poder modificarlo todo a 
+la vez de manera rápida y sencilla. 
+
+Las variables se guardan en memoria y no en almacenamiento, lo que 
+quiere decir que únicamente se podrán acceder a ellas durante la 
+ejecución del código y perderán su contenido en el momento en el que 
+se acabe la ejecución.
+
+En nuestro caso, Python es flexible al momento de declarar variables.
+No necesitamos especificar el tipo de datos que vamos a guardar dentro,
+y podemos cambiar de tipo de datos de manera dinámica.
+
+Podemos llamar a nuestras variables de casi cualquier manera, aun así hay
+ciertas reglas que debemos seguir. En python hay ciertas palabras 
+reservadas para la sintaxis del lenguaje. Por ejemplo no podemos llamar
+a una variable "for", ya que esta es la palabra reservada para los 
+bucle for. Tampoco podemos comenzar el nombre por un numero. No podemos 
+usar ningún caracter que no sea una letra o un numero, exceptuando el
+simbolo  '_'.
+
+Tenemos que tener en cuenta que el compilador distingue entre mayuscula y
+minusculas. La variable numero y Numero se considerarian como dos nombres
+diferentes. Es por eso que tenemos que revisar en como nombramos las
+variables, ya que podemos equivocarnos al llamarlas y tener un error de
+sintaxis.
+
+Un concepto que debemos aprender es el del ambito de una variable. El ambito
+es donde se puede usar una variable en el codigo. Por ejemplo, una variable 
+declarada en una funcion unicamente podra ser usada dentro de esa funcion, 
+es decir, es de ambito local a la funcion. Si queremos usar una misma variable
+en varias funciones, tenemos que declararla en el ambito global, fuera de cualquier funcion. 

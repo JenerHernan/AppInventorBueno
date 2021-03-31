@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+<style>
+	a{
+		font-size: 65px;
+		font-family: Ubuntu;
+		color: whitesmoke;
+		position: absolute;
+		left: 15%;
+		top: 45%;
+		text-align: center;
+	}
+	.load .letter {
+	  display: inline-block;
+	  line-height: 1em;
+	}
+	body{
+		background-color: #20C3AF;
+		width: 100%;
+	}
+</style>
+<title>Documento sin título</title>
+
+</head>
+
+<body>
+	<a class="load">
+	Loading...</a>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script>
+var textWrapper = document.querySelector('.load');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.load .letter',
+    translateY: [100,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1400,
+    delay: (el, i) => 300 + 30 * i
+  }).add({
+    targets: '.load .letter',
+    translateY: [0,-100],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 1200,
+    delay: (el, i) => 100 + 30 * i
+  });</script>
+</html>

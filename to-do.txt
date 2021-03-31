@@ -10,7 +10,6 @@ arrays
 	-Tener un prototipo del quiz más o menos funcional
 
 
-
 INTRODUCCION
 -Poner un quiz preguntando que opcion es un algoritmo
 
@@ -27,37 +26,45 @@ pxs de progreso
 -Normas de los nombres
 
 
+VARIABLES
 
-
+(HECHO)
 Las variables son contenedores donde guardar valores y poder repetir
 estos en multiples partes del código y poder modificarlo todo a 
 la vez de manera rápida y sencilla. 
 
-Las variables se guardan en memoria y no en almacenamiento, lo que 
-quiere decir que únicamente se podrán acceder a ellas durante la 
-ejecución del código y perderán su contenido en el momento en el que 
-se acabe la ejecución.
-
-En nuestro caso, Python es flexible al momento de declarar variables.
-No necesitamos especificar el tipo de datos que vamos a guardar dentro,
-y podemos cambiar de tipo de datos de manera dinámica.
-
+//Explicar todo esto en una sola imagen (HECHO)
 Podemos llamar a nuestras variables de casi cualquier manera, aun así hay
-ciertas reglas que debemos seguir. En python hay ciertas palabras 
+ciertas reglas que debemos seguir. En python hay ciertas 
 reservadas para la sintaxis del lenguaje. Por ejemplo no podemos llamar
 a una variable "for", ya que esta es la palabra reservada para los 
-bucle for. Tampoco podemos comenzar el nombre por un numero. No podemos 
-usar ningún caracter que no sea una letra o un numero, exceptuando el
-simbolo  '_'.
+bucles for. Tampoco podemos comenzar el nombre por un numero.
 
-Tenemos que tener en cuenta que el compilador distingue entre mayuscula y
-minusculas. La variable numero y Numero se considerarian como dos nombres
-diferentes. Es por eso que tenemos que revisar en como nombramos las
-variables, ya que podemos equivocarnos al llamarlas y tener un error de
-sintaxis.
 
-Un concepto que debemos aprender es el del ambito de una variable. El ambito
-es donde se puede usar una variable en el codigo. Por ejemplo, una variable 
-declarada en una funcion unicamente podra ser usada dentro de esa funcion, 
-es decir, es de ambito local a la funcion. Si queremos usar una misma variable
-en varias funciones, tenemos que declararla en el ambito global, fuera de cualquier funcion. 
+
+//Combinar este y el anterior (HECHO)
+Tenemos que tener en cuenta que el compilador distingue entre mayúsculas y
+minúsculas. La variable numero y Numero se considerarian como dos nombres
+diferentes.
+
+
+
+
+
+FUNCIONES
+
+Las funciones permiten repetir código usando una etiqueta. Esto nos ahorra 
+lineas de código duplicadas y hace que el código sea más comprensible.
+
+Las funciones pueden, o no, tener varios parámetros de entrada. Las funciones
+trabajarán con los parámetros, para procesarlos y devolver un parámetro de salida.
+
+Una función puede o no tener un valor de salida. Pero, solo
+puede devolver un único valor. 
+
+Un concepto que debemos tener en cuenta cuando usamos funciones es el del ámbito 
+de una variable. El ámbito es donde se puede usar una variable en el código. 
+
+Por ejemplo, una variable declarada en una función, únicamente podrá ser usada dentro 
+de esa función.  Es decir, es de ámbito local a la función. Si queremos usar una misma 
+variable en varias funciones, tenemos que declararla en el ámbito global, fuera de cualquier función. 

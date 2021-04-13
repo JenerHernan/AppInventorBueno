@@ -59,10 +59,50 @@ print(var)
 '''
 
 
+
+
+
+
+
+
 import math
 
 def pitagoras(c1,c2):
     hipotenusa = math.sqrt((c1*c1) + (c2*c2))
     return hipotenusa
 
-print(pitagoras(4,4))
+
+
+
+
+
+
+
+
+cateto1 = 3
+cateto2 = 4
+
+h = pitagoras(cateto1,cateto2)
+
+
+
+
+
+
+
+
+
+
+a = "Global"
+def funcion():
+    a = "Local"
+    print(a)
+
+funcion()
+print(a)
+
+
+
+
+
+#

@@ -17,14 +17,6 @@ INTRODUCCION
 verde de la app
 20C3AF
 
-pxs de progreso
-32 px
-
--Que son
--Como funcionan
--Variables en Python
--Normas de los nombres
-
 
 VARIABLES
 
@@ -53,18 +45,25 @@ diferentes.
 
 FUNCIONES
 
+//HECHO
 Las funciones permiten repetir código usando una etiqueta. Esto nos ahorra 
 lineas de código duplicadas y hace que el código sea más comprensible.
 
+//HECHO
 Las funciones pueden, o no, tener varios parámetros de entrada. Las funciones
 trabajarán con los parámetros, para procesarlos y devolver un parámetro de salida.
 
-Una función puede o no tener un valor de salida. Pero, solo
-puede devolver un único valor. 
-
+//HECHO
 Un concepto que debemos tener en cuenta cuando usamos funciones es el del ámbito 
 de una variable. El ámbito es donde se puede usar una variable en el código. 
+
 
 Por ejemplo, una variable declarada en una función, únicamente podrá ser usada dentro 
 de esa función.  Es decir, es de ámbito local a la función. Si queremos usar una misma 
 variable en varias funciones, tenemos que declararla en el ámbito global, fuera de cualquier función. 
+
+
+
+
+
+

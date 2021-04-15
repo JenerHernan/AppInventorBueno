@@ -4,18 +4,29 @@ variables
 condicionales
 arrays
 
-
--Pensar como continuar la leccion de introduccion
--Hacer un sketch de como realizar preguntas
-	-Tener un prototipo del quiz más o menos funcional
-
-
-INTRODUCCION
--Poner un quiz preguntando que opcion es un algoritmo
-
-
 verde de la app
 20C3AF
+
+8 PREGUNTAS (2 de cada apartado aprox)
+Introduccion:
+-Que es un algoritmo?
+
+Tipos de datos:
+-Que valores puede tener una variable booleana?
+-Que se mostrará en pantalla con este codigo print("2" + "2")?
+-Que contendrá esta variable? hola = "Hola" + True
+
+Variables:
+-Cual de estos nombres seria correcto para una variable? Num 1, 1Num, _Núm1, Num-1
+-Que mostrará en pantalla? saludo = "Hola"; print(Saludo)
+
+Funciones:
+-Que sucederia si ejecutamos este trozo de codigo? algo de scope de variables
+-Esta correctamente definida esta funcion? func(): print("Hola Mundo")
+No, una funcion siempre tiene que tener un parametro de salida
+No, una funcion siempre tiene que tener un parametro de entrada
+No, una funcion no puede usar la funcion print()
+Si
 
 
 VARIABLES
@@ -31,8 +42,6 @@ ciertas reglas que debemos seguir. En python hay ciertas
 reservadas para la sintaxis del lenguaje. Por ejemplo no podemos llamar
 a una variable "for", ya que esta es la palabra reservada para los 
 bucles for. Tampoco podemos comenzar el nombre por un numero.
-
-
 
 //Combinar este y el anterior (HECHO)
 Tenemos que tener en cuenta que el compilador distingue entre mayúsculas y
@@ -57,7 +66,7 @@ trabajarán con los parámetros, para procesarlos y devolver un parámetro de sa
 Un concepto que debemos tener en cuenta cuando usamos funciones es el del ámbito 
 de una variable. El ámbito es donde se puede usar una variable en el código. 
 
-
+//HECHO
 Por ejemplo, una variable declarada en una función, únicamente podrá ser usada dentro 
 de esa función.  Es decir, es de ámbito local a la función. Si queremos usar una misma 
 variable en varias funciones, tenemos que declararla en el ámbito global, fuera de cualquier función. 

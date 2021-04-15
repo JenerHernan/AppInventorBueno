@@ -27,7 +27,7 @@ No, una funcion siempre tiene que tener un parametro de salida
 No, una funcion siempre tiene que tener un parametro de entrada
 No, una funcion no puede usar la funcion print()
 Si
-
+Lorem lorem lorem lorem lorem lorem lorem
 
 VARIABLES
 

@@ -1,0 +1,152 @@
+
+
+
+#file-1 {/* Esconde el boton que genera input*/
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+#file-1 + label {
+	
+	width: 20%;
+	height: 4%;
+	
+	margin: 2%;/*margen exterior*/
+    padding: 0 10%;/* margen interior entre el texto y el borde del botón*/
+    margin-left: 2%;
+	
+	
+    outline:0rem;/*Al hacer click, oculta el borde del bloque*/
+	color: #000000; /*color de la letra #000000 este color es negro */
+    background: -webkit-linear-gradient(top,#ffcc00,#e77018); /* Cambiar a otro color, Chrome10+,Safari5.1+ */
+	
+    max-width: 100%;
+	
+	
+	
+	font: bold 1.25rem/1.5rem Arial,sans-serif;/*negrita (bold), tamaño de letra y fuente*/
+    font-size: 1.25rem;  /* 1.25rem=20px */
+  
+	line-height: 1.5rem;/*especifica la altura de la línea*/
+	
+    font-weight: 700;
+	
+	
+	
+	
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;/*Cambia el icono del cursor de flecha a dedo que quiere pulsar */
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;   /* 10px 20px */
+ 
+    -webkit-border-radius: 0.8rem;/* redondea los bordes del botón*/
+}
+
+#file-1 + label:hover {
+	/*color: #39a0be;*/
+    background: -webkit-linear-gradient(top,#f1b55b,#eb9514);
+}
+
+#file-1 + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;/*Color de relleno del icono de descargar*/
+    margin-top: -0.25em;
+    /* 4px */
+    margin-right: 0.25em;
+    /* 4px */
+}
+
+
+
+
+
+#file-2 {/* Esconde el boton que genera input*/
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+#file-2 + label {
+	
+    padding: 0 3.125rem;/* margen interior entre el texto y el borde del botón*/
+    margin-left: 2%;
+	
+	width: 20%;
+	height: 5%;
+	
+	margin: 2%;/*margen exterior*/
+    outline:0rem;/*Al hacer click, oculta el borde del bloque*/
+	color: #000000; /*color de la letra #000000 este color es negro */
+    background: -webkit-linear-gradient(top,#ffcc00,#e77018); /* Cambiar a otro color, Chrome10+,Safari5.1+ */
+	
+    max-width: 100%;
+	
+	
+	
+	font: bold 1.25rem/1.5rem Arial,sans-serif;/*negrita (bold), tamaño de letra y fuente*/
+    font-size: 1.25rem;  /* 1.25rem=20px */
+  
+	line-height: 1.5rem;/*especifica la altura de la línea*/
+	
+    font-weight: 700;
+	
+	
+	
+	
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;/*Cambia el icono del cursor de flecha a dedo que quiere pulsar */
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;   /* 10px 20px */
+ 
+    -webkit-border-radius: 0.8rem;/* redondea los bordes del botón*/
+}
+
+#file-2 + label:hover {
+	/*color: #39a0be;*/
+    background: -webkit-linear-gradient(top,#f1b55b,#eb9514);
+}
+
+#file-2 + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;/*Color de relleno del icono de descargar*/
+    margin-top: -0.25em;
+    /* 4px */
+    margin-right: 0.25em;
+    /* 4px */
+}
+
+
+@media only screen and (max-width: 768px) {
+	
+	#file-1 + label {
+		font-size: 0.75rem;	
+		margin-left: 1%;
+		display: none;
+	}
+	
+	#file-2 + label {
+		font-size: 0.75rem;
+		margin-left: 1%;
+		display: none;
+	}
+
+}
+
+
+
+

@@ -1,0 +1,167 @@
+/*
+  body {
+  background-image: url("../img/img20170705-14601-d0b0sg.gif");
+  background-repeat: no-repeat;
+  background-size: 100%;
+ 
+  }
+  */
+   body {
+  /*background-image: url("../img/_original.gif"), url("../img/FreeFlutteringSnow.jpg");*/
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  overflow:hidden;
+  }
+  
+ #imagen1 {
+
+    vertical-align: 10%;
+	
+    display: block;
+    margin: auto;
+
+    top:20%;
+
+	max-width: 20%;
+    height: auto;
+}
+
+ #imagen_2 {
+	 
+    display: block;
+    margin: auto;
+
+    max-width: 6%;
+    height: auto;
+   }
+
+ #boton-1 {
+	background: -webkit-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%); /* Chrome10+,Safari5.1+ */
+    outline:0px; /*tamaño borde al hacer click, 0px oculta el borde*/
+
+    position: absolute; /* posición con respecto a toda la página web (NO relativa a ningún elemento) */
+	left: 2%; /*distancia entre el lado izquierdo de la página y el botón*/
+    top: 40%;  /*distancia entre la parte de arriba de la página y el botón*/
+	
+    
+    margin: 10px; /*margen exterior*/
+    padding: 0 40px; /* margen interior entre el texto y el borde del botón*/
+	height: 10%; /*altura del botón*/
+		
+		
+    text-align: center; /*alineación del texto*/
+    text-decoration: none;
+    font: bold 20px/25px Arial, sans-serif; /*negrita (bold), tamaño de letra y fuente*/
+ 
+    /*text-shadow: 1px 1px 1px rgba(255,255,255, .22); /* no parece que afecte al aspecto final*/
+ 
+    -webkit-border-radius: 10px; /* redondea los bordes del botón*/
+
+    box-shadow: 0.625rem 0.625rem 0.625rem rgba(0,0,0, .29), inset 0.0625rem 0.0625rem 0.0625rem rgba(255,255,255, .44);
+    -webkit-transition: all 0.15s ease;
+}
+
+	#boton-1:hover {
+	-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.29), inset 0px 0px 2px rgba(0,0,0, .5);
+	box-shadow: 1px 1px 1px rgba(0,0,0,.29), inset 0px 0px 2px rgba(0,0,0, .5);
+	background: -webkit-linear-gradient(top,  #a5cd4e 0%,#000000 100%);
+	}
+	
+
+ #boton-2 {
+
+	background: -webkit-linear-gradient(top,  #70c9e3 0%,#39a0be 100%); /* Chrome10+,Safari5.1+ */
+	outline:0px;  /*tamaño borde al hacer click, 0px oculta el borde*/
+    position: absolute;  /* posición con respecto a toda la página web (NO relativa a ningún elemento) */
+	left: 2%; /*distancia entre el lado izquierdo de la página y el botón*/
+    top: 60%; /*distancia entre la parte de arriba de la página y el botón*/
+	
+    
+    margin: 10px;  /*margen exterior*/
+    padding: 0 40px;  /* margen interior entre el texto y el borde del botón*/
+	height: 10%; /*altura del botón*/
+	
+    text-align: center;  /*alineación del texto*/
+    text-decoration: none;
+    font: bold 20px/25px Arial, sans-serif; /*negrita (bold), tamaño de letra y fuente*/
+ 
+       /*text-shadow: 1px 1px 1px rgba(255,255,255, .22); /* no parece que afecte al aspecto final*/
+	   
+    -webkit-border-radius: 10px; /* redondea los bordes del botón*/
+
+    -webkit-box-shadow: 10px 10px 10px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+  
+    -webkit-transition: all 0.15s ease;
+}
+
+	#boton-2:hover {
+	-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.29), inset 0px 0px 2px rgba(0,0,0, .5);
+	box-shadow: 1px 1px 1px rgba(0,0,0,.29), inset 0px 0px 2px rgba(0,0,0, .5);
+	background: -webkit-linear-gradient(top,  #39a0be 0%,#000000 100%);
+	}
+	
+	#boton-3 {
+	background: -webkit-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%); /* Chrome10+,Safari5.1+ */
+    outline:0px; /*tamaño borde al hacer click, 0px oculta el borde*/
+
+    position: absolute; /* posición con respecto a toda la página web (NO relativa a ningún elemento) */
+	left: 2%; /*distancia entre el lado izquierdo de la página y el botón*/
+    top: 20%;  /*distancia entre la parte de arriba de la página y el botón*/
+	
+    
+    margin: 10px; /*margen exterior*/
+    padding: 0 40px; /* margen interior entre el texto y el borde del botón*/
+	height: 10%; /*altura del botón*/
+		
+		
+    text-align: center; /*alineación del texto*/
+    text-decoration: none;
+    font: bold 20px/25px Arial, sans-serif; /*negrita (bold), tamaño de letra y fuente*/
+ 
+    /*text-shadow: 1px 1px 1px rgba(255,255,255, .22); /* no parece que afecte al aspecto final*/
+ 
+    -webkit-border-radius: 10px; /* redondea los bordes del botón*/
+
+    box-shadow: 0.625rem 0.625rem 0.625rem rgba(0,0,0, .29), inset 0.0625rem 0.0625rem 0.0625rem rgba(255,255,255, .44);
+    -webkit-transition: all 0.15s ease;
+}
+
+	#boton-3:hover {
+	-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.29), inset 0px 0px 2px rgba(0,0,0, .5);
+	box-shadow: 1px 1px 1px rgba(0,0,0,.29), inset 0px 0px 2px rgba(0,0,0, .5);
+	background: -webkit-linear-gradient(top,  #a5cd4e 0%,#000000 100%);
+	}
+	
+	#myEmbeddedScene {
+  height: 75%;
+  width: 68%;
+  border-radius: 0.8rem;
+  border-style: solid;
+  border-width: 0.15rem;
+  position: absolute; /* posición con respecto a toda la página web (NO relativa a ningún elemento) */
+	left: 30%; /*distancia entre el lado izquierdo de la página y el botón*/
+    top: 20%;  /*distancia entre la parte de arriba de la página y el botón*/
+}
+
+
+	 #numero-5 {
+
+
+	
+    transform: translate(-50%, -50%);  /*modifica de alguna manera los parámetros anteriores, mueve el botón*/
+    margin: 30px;  /*margen exterior*/
+    padding: 0 40px;  /* margen interior entre el texto y el borde del botón*/
+	height: 100px; /*altura del botón*/
+	
+    text-align: center;  /*alineación del texto*/
+    text-decoration: none;
+    font: bold 20px/25px Arial, sans-serif; /*negrita (bold), tamaño de letra y fuente*/
+ 
+       /*text-shadow: 1px 1px 1px rgba(255,255,255, .22); /* no parece que afecte al aspecto final*/
+	   
+    -webkit-border-radius: 40px; /* redondea los bordes del botón*/
+
+    -webkit-box-shadow: 10px 10px 10px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+  
+    -webkit-transition: all 0.15s ease;
+}

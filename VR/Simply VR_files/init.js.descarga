@@ -1,0 +1,186 @@
+
+	var fileName = '';
+	var inputs = document.querySelectorAll( '#file-1' );
+	var animacionactiva=false;
+	var num=5;
+	var funcionanimacion;
+					
+		
+		//Función que modifica el texto del botón para que aparezca el nombre de los archivos
+		function init( document, window, index )
+		{
+				Array.prototype.forEach.call( inputs, function( input )
+				{   
+					var label	 = input.nextElementSibling
+					input.addEventListener( 'change', function( e )
+						{
+							fileName = e.target.value.split(',').pop(); // esta funcion coge el nombre del archivo
+							fileName = fileName.split('\\').pop();							
+							fileName = fileName.split('.');						
+							label.querySelector( 'span' ).innerHTML = fileName[0]; //¿muestra el nombre del archivo por la caja de texto?
+						});
+				});
+				
+			AFRAME.registerComponent('do-something-once-loaded', {
+			init: function () {
+			// This will be called after the entity has properly attached and loaded.
+			console.log('Listo');
+			}
+			});
+			
+		};
+	
+		//Función que permite añadir o modificar elementos en la escena de a-frame de forma dinámica
+		function actualizar(evt,n){
+			
+			var name=evt.currentTarget.value;
+			
+			var assets=document.querySelector('a-assets');
+			
+			var objel=document.getElementById('obj'+n);
+			var mtlel=document.getElementById('mtl'+n);
+			if(objel && mtlel){
+				objel.setAttribute('src','Modelos_alumnos/'+name+'.obj');
+				mtlel.setAttribute('src','Modelos_alumnos/'+name+'.mtl');
+			}
+			else{
+				objel=document.createElement('a-asset-item');
+				objel.setAttribute('do-something-once-loaded', '');
+				objel.setAttribute('id','obj'+n);
+				objel.setAttribute('src','Modelos_alumnos/'+name+'.obj');
+				assets.appendChild(objel);
+				
+				mtlel=document.createElement('a-asset-item');
+				mtlel.setAttribute('do-something-once-loaded', '');
+				mtlel.setAttribute('id','mtl'+n);
+				mtlel.setAttribute('src','Modelos_alumnos/'+name+'.mtl');
+				assets.appendChild(mtlel);
+			}
+			
+			var sceneEl =document.getElementById('escena');
+			
+			
+			if(n<5){
+				var entityel =document.getElementById('entity'+n);
+			
+				if(entityel){
+					entityel.setAttribute('obj-model',{
+					obj: '#obj'+n,
+					mtl: '#mtl'+n
+					});
+				}
+				else{
+					entityel = document.createElement('a-entity');
+					entityel.setAttribute('do-something-once-loaded', '');
+					entityel.setAttribute('obj-model',{
+						obj: '#obj'+n,
+						mtl: '#mtl'+n
+					});
+					entityel.setAttribute('id','entity'+n);
+					if(n==1){
+						entityel.setAttribute('position',{x: 0, y:0, z:-80});
+						entityel.setAttribute('rotation',{x: 0, y:0, z:0});
+					}
+					else if(n==2){
+						entityel.setAttribute('position',{x: -80, y:0, z:0});
+						entityel.setAttribute('rotation',{x: 0, y:90, z:0});
+					}
+					else if(n==3){
+						entityel.setAttribute('position',{x: 80, y:0, z:0});
+						entityel.setAttribute('rotation',{x: 0, y:-90, z:0});
+					}
+					else if(n==4){
+						entityel.setAttribute('position',{x: 0, y:0, z:80});
+						entityel.setAttribute('rotation',{x: 0, y:180, z:0});
+					}				
+					sceneEl.appendChild(entityel);
+				}
+			}
+			else{
+				var entityel =document.getElementById('entity5');
+				if(!entityel){
+					entityel = document.createElement('a-entity');
+					entityel.setAttribute('do-something-once-loaded', '');
+					entityel.setAttribute('obj-model',{
+						obj: '#obj'+n,
+						mtl: '#mtl'+n
+					});
+					entityel.setAttribute('id','entity5');
+					entityel.setAttribute('position',{x: 0, y:0, z:-20});
+					sceneEl.appendChild(entityel);
+				}				
+			}
+		};
+		
+		//Funcion que activa y desactiva el funcionamiento de la animación
+		function controlanimacion(){
+			animacionactiva=!animacionactiva;
+			if(animacionactiva==true){
+				funcionanimacion=setInterval(animacion,300);
+				document.getElementById("buttonplay").innerHTML="Stop";
+			}
+			else{
+				clearInterval(funcionanimacion);
+				document.getElementById("buttonplay").innerHTML="Play";
+			}
+		}
+		
+		//Función que genera la animación cambiando entre los modelos indicados
+		function animacion(){
+			var entityel =document.getElementById('entity5');
+			entityel.setAttribute('obj-model',{
+						obj: '#obj'+num,
+						mtl: '#mtl'+num
+					});
+			num++;
+			if(num==8){
+				num=5;
+			}
+		}
+		
+		
+		var x = 0;
+		var z = 0;
+		
+		//Funcion para avanzar en la dirección en la que se está mirando al hacer click en la escena
+		function avanzar(){
+			var camera = document.querySelector('#camera');
+			var posicion=camera.getAttribute('position');
+			
+			var radian = - camera.getAttribute('rotation').y * (3.1415/180);
+
+			x = x + 4*(Math.sin(radian));
+			z = z - 4*(Math.cos(radian));
+			console.log(x);
+			console.log(z);
+			camera.setAttribute('position', {x: x, y: posicion.y, z: z});
+		}
+		
+		//Funcion que controla el menu de pestañas para cambiar entre el modo mundo y el modo animacion. Al cambiar de modo vacía el contenido de la escena
+		function cambiarModo(evt,modo){
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			document.getElementById(modo).style.display = "block";
+			evt.currentTarget.className += " active";
+			
+			var nodeentities = document.getElementById('escena');
+			while (nodeentities.firstChild) {
+				nodeentities.removeChild(nodeentities.firstChild);
+			}
+			
+			var nodeassets = document.querySelector('a-assets');
+			while (nodeassets.firstChild) {
+				if(firstChild.id!="sky" && firstChild.id!="grass"){
+					nodeassets.removeChild(nodeassets.firstChild);
+				}
+			}	
+			
+		}
+		
